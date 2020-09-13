@@ -1,0 +1,16 @@
+这是一个语法测试工程
+
+BasicContent 
+   |__ big_four_default 用于测试Big Four 的 default 和 delete 样例 (Effective C++)
+   |__ lotsofvalue 用于测试参数包。 想法无法实现
+   |__ macro 用于测试 #define 用于编译控制 结合cmake进行实现，cmake此处的使用细节见 CMakeLists
+   |__ template 用于测试 模板的特化 和 偏特化。 类的偏特化不知道为什么编译无法通过
+   |__ using 用于测试 using 在继承的时候，会不会受到private public protected 的影响
+
+Carto-self-test
+   |__ bitset 测试 bitset 在VoxelFilter 中的使用，之前在编写voxel filter 的时候，出现过问题，用来发现是和容器有关，和bitset 本身无关。
+   |__ downsampling 用于测试 模板+虚函数+继承的骚操作
+   |__ LidarMatcher 用于测试 Variadic template 的应用，后来发现自己简单的程序并用不上。
+   |__ Sophus 用于测试 Sophus 模板版的使用，之前总是不对。
+
+Effective C++ 测试使用

@@ -1,0 +1,5 @@
+#cmakedefine US_B 
+
+#cmakedefine01 TEST_V1 @TEST_VAR1@
+#cmakedefine TEST_V2 @TEST_VAR2@
+
