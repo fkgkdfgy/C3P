@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/big-four-default/virtual-dtor-base.cpp
+iostream
+-
+memory
+-
+

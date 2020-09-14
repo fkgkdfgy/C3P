@@ -1,0 +1,52 @@
+C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
+
+1. 使用bool、iter、多次更新的容器时， 定义或者使用的时候，都要确实是否初始化、++、更新、清空。
+   尽量显式初始化成员对象;
+
+   iter 更要提前检测是否越界。
+
+   防止出现 Core Dump 重要的一步。
+2. 函数形参的传递：内置类型ie. float int 的传递 使用 pass-by-value 。 自定义类型使用 pass-by-reference-to-const
+
+3. ECPP1: const 代替 #define 
+          便于之后，在编译的情况下更好的找到问题，所在
+          enum 代替 #define ？？ 还不明了
+          inline 代替 #define 
+          源于 #define 定义函数，来减少函数调用的开销 ie. #define MAX(a,b) ((a)>(b)?(a):(b)); 因为是完全替代，所以M(a++,b) M(a++,b+10) int a= 5,b=10; 结果不同
+          而且开销的优势已经被inline 取代 所以之后不要这么写。
+          
+          #define 的编译控制 还是值得肯定的
+4. 多用const：4.1 返回值能const 就用const 甚至可以多用 const T &
+              4.2 const成员函数
+5. 对象使用前确认会被初始化，int x； x 有时是0 有时不是0
+6. 了解C++ 悄悄构造的成员函数 Big Four: default 构造、析构、拷贝、赋值 
+         6.1 Big Four 只有被调用的时候，才会自动生成。
+         6.2 关于赋值和拷贝函数 如果类内部的类成员是一个 引用 或者 const 的话，拷贝和赋值函数都会报错，以为 引用和 const 不可更改的性质，且如果是对引用进行初始化，传入的不能是数值
+7. 不想要编译器生成的Big Four ，请明确拒绝掉 =delete 或者放入 private。
+8. 为多态基类构建一个virtual的析构函数： 来防止出现局部析构的情况。 反之，如果一个类不是准备当作基类来使用，就不应该有一个virtual的析构函数。
+   但是 仅仅是在多态的情况下需要注意，如果不是动态绑定的多态，静态绑定可以不用担心这个问题。 (已经经过测试)
+     * 1. 静态绑定  不存在 ContentInDerived 不释放内存的情况 (Base 的析构函数是不是virtual都是一样的)
+     * 2. 动态绑定  Base的析构函数 是 virtual的情况会对 ContentInDerived 进行释放
+     * 3. 动态绑定  Base的析构函数不是virtual的情况不会对 ContentInDerived 进行释放
+   这里的输出日志：也提醒了一下构造和析构的顺序 ： 构造：Base-> Derived 析构：Derived-> Base
+
+   但是如果使用只能指针，就无所谓了，他都可以帮你释放掉
+9. 不要让异常逃离析构函数  ie. vector<Wedget> 在vector 析构的时候，如果多个Wedget 析构报错，就会导致程序出现问题。
+   具体地讲，也就是不要让Wedget 析构的报错，应该在析构函数内部解决。
+   方法 ： 析构内部进行，try ...catch...abort()
+10. 不在析构和构造函数中使用virtual函数。 因为在构造的时候，虚函数下降不到应该在的继承位置。 ie. Base 内部有一个 virtual f()=0 成员函数，在Base 构造的时候调用，本来想的调用Derived 的f() 但是因为
+    是在Base的ctor 中call，所以只能用Base的f(),结果就是报错，“没有定义！！！！” 很严重的错误
+
+11. 所有的测试样例的brief 都应该写明白，此处特质 CPPPractice 防止之后忘记
+12. operator= :
+    12.1 返回一个 reference
+    12.2 处理自我赋值的问题
+13. 自己编写copy函数，请确定包含了每一个成员对象。
+14. 资源管理：尽量使用shared_ptr 而不是 普通的指针
+15. 编写函数的时候，需要考虑到输入是右值的情况。 
+16. 怪不得是Big Five 而不是 Big Six 赋值操作符 const T & 对于左值右值可以同样的处理。所以一般情况下，并不需要，特殊的定义一个 const T&& 的赋值操作符
+
+
+
+
+

@@ -12,6 +12,8 @@ include_directories(
 
 
 ## C++ Basic
+# explicit
+add_executable(explicit-test BasicContent/explicit/explicit-test.cpp)
 
 # functor
 add_executable(functor-test BasicContent/functor/functor.cpp)

@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/static/static-class.cpp
+static-class.hpp
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/static/static-class.hpp
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/static/static-class.hpp
+iostream
+-
+
