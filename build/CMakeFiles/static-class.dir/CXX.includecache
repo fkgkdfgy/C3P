@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sunny/workspace_private/C3P/BasicContent/static/static-class.cpp
+static-class.hpp
+/home/sunny/workspace_private/C3P/BasicContent/static/static-class.hpp
+
+/home/sunny/workspace_private/C3P/BasicContent/static/static-class.hpp
+iostream
+-
+

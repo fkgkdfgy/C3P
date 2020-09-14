@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/sophus-test.dir/Carto-self-test/Sophus/sophus_test.cpp.o  -o executable/sophus-test 

@@ -82,8 +82,8 @@ add_executable(static-class BasicContent/static/static-class.cpp)
 
 ## C++11 
 # Variadic Templates
-add_executable(vt_eg1 ./CPP11/VariadicTemplate/vt_eg1.cpp)
-add_executable(return-function CPP11/functional/return-function.cpp)
+add_executable(vt_eg1 ./CPP11/VariadicTemplate/vt_eg1.cpp) 
+# add_executable(return-function CPP11/functional/return-function.cpp) 有报错的问题
 
 # reference 主要测试 万能引用和完美转发
 add_executable(universal-reference CPP11/reference/universal-reference.cpp)
@@ -119,5 +119,9 @@ add_executable(bitset-test ./Carto-self-test/bitset/bitset.cpp)
 
 # Sophus Eigen 主要目的是确定 模板版本的Sophus的使用
 
-add_executable(sophus-test ./Carto-self-test/Sophus/sophus_test.cpp)
+#add_executable(sophus-test ./Carto-self-test/Sophus/sophus_test.cpp)
 
+### ECPP 
+
+# ECPP17 
+add_executable(ECPP17 "Effective C++/ECPP17.cpp")

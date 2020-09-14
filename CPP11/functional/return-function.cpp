@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-09-08 18:48:17
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-09-08 19:20:37
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-09-14 16:43:53
  * @Description: 用于测试返回function 的函数如何使用
  */
 
@@ -14,7 +14,7 @@ using namespace std;
 
 
 
-// ceil 不是一个函数模板 而是一直输入double的函数
+// 
 template<typename T>
 function<int(T)> integralType(int i=1)
 {

@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/return-function.dir/CPP11/functional/return-function.cpp.o  -o executable/return-function 
