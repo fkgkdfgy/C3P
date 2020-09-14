@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/downsampling.dir/Carto-self-test/downsampling/downsampling.cpp.o  -o executable/downsampling 
