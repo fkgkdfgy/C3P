@@ -1,1 +1,0 @@
-/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/usingtry.dir/BasicContent/using/usingFieldtest.cpp.o  -o executable/usingtry 

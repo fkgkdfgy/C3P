@@ -1,1 +1,0 @@
-/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/pointer-test.dir/BasicContent/pointer/pointer-test.cpp.o  -o executable/pointer-test 
