@@ -46,7 +46,21 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
 15. 编写函数的时候，需要考虑到输入是右值的情况。 
 16. 怪不得是Big Five 而不是 Big Six 赋值操作符 const T & 对于左值右值可以同样的处理。所以一般情况下，并不需要，特殊的定义一个 const T&& 的赋值操作符
 
+16. EC++12 assign function 如果不是用编译器生成的版本，要注意是不是所有的类成员都完成了复制。 
+    忘记之后，编译器也并不会提醒。
+17. EC++13 尽可能使用智能指针来防止内存泄漏 也就是RAII的使用(使用Object 来对内存进行管理) heap-based    RAII 的概念 https://www.jianshu.com/p/b7ffe79498be
+18. EC++14 资源管理类中小心copy 行为 RAII 的copy的一般行为： 要么抑制 like unqiue_ptr 要么进行计数 like shared_ptr
+19. EC++15 RAII class 类的设计应该提供一个接口可以访问原始资源，并且使用显式的.get() 会让使用更加安全
+20. EC++16 new 和 delete 应该成对而且形式相同地进行使用
+21. EC++17 独立语句将new的对象放入智能指针中
 
-
-
+---------CHAPTER4 良好的接口设计----------------------------------
+22. EC++20 使用 const T & 作为函数参数，而不是pass-by-value 
+           内置类型则还是pass-by-value 
+23. EC++22 函数不要返回一个指向local stack (heap-based、local static) 的 pointer(reference)
+24. EC++23 尽量用non-member 、non-friend function 替代member function
+           可以提高member function 的封装性、包裹的弹性、可扩充性。
+           non-member non-function 函数 当然也可以是另外一个 class 的member function
+           封装性的概念：有多少行代码可以访问一块内存
+25. EC++24 如果需要一个函数的每一个参数都需要继续类型转化，那么那个函数要是一个non-member function
 

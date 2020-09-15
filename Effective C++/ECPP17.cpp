@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-14 16:18:38
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-14 16:48:07
+ * @LastEditTime: 2020-09-15 11:17:30
  * @FilePath: /C3P/Effective C++/ECPP17.cpp
  * @Description: 对应ECPP 第17条 使用独立语句将newd 对象放置入智能指针
  */
@@ -29,7 +29,10 @@ void print(shared_ptr<Widget> tmp,int tmp_i)
     
 }
 
-// 顺序 test_func()
+// 产生的顺序 可能是 test_funch new Widget 然后make_share
+// 也可能是 new Widge 然后test_func 最后make_shared 
+// 结果就是如果 中间位置进行test_func 的时间abort()
+// new Widge 就没有了delete 与之对应 -> 内存泄漏
 
 int main(int argc,char **argv)
 {
