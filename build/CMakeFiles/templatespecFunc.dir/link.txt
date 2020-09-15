@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/templatespecFunc.dir/BasicContent/template/template-specialize-function.cpp.o  -o executable/templatespecFunc 
