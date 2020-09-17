@@ -37,6 +37,7 @@ add_executable(usingtry ./BasicContent/using/usingFieldtest.cpp)
 #add_executable(lotsofvalue ./BasicContent/lotsofvalue/lotsofvalue.cpp)
 
 # template
+add_executable(template-speciz-class ./BasicContent/template/template-specialize-class.cpp)
 add_executable(templatespecFunc ./BasicContent/template/template-specialize-function.cpp)
 add_executable(template-default BasicContent/template/template-default.cpp)
 # macro  
