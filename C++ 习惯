@@ -63,4 +63,7 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
            non-member non-function 函数 当然也可以是另外一个 class 的member function
            封装性的概念：有多少行代码可以访问一块内存
 25. EC++24 如果需要一个函数的每一个参数都需要继续类型转化，那么那个函数要是一个non-member function
-26. EC++25 
+26. 对于基类的基础设置：1. dtor + virtual
+                     2. copy ctor =delete   
+                     3. copy assign = delete
+27.

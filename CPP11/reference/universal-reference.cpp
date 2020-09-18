@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-09-11 10:46:51
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-09-16 21:42:23
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-09-18 08:54:56
  * @Description: 这里主要讨论C++11 的万能引用
  */
 
@@ -20,7 +20,7 @@ using namespace std;
 // 万能引用只对 T&& 有效  对于 const T&& 无效
 // T&& 只有在函数模板中 万能引用会生效，在T已经具体化的函数中，还是代表右值引用
 template <typename T>
-void printUniversal(const T&& a)
+void printUniversal( T&& a)
 {   
     cout<<"using the universal reference"<<endl;
     cout<<a<<endl;

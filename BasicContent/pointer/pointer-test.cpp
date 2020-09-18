@@ -1,9 +1,10 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-09-13 17:00:20
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-09-13 20:15:53
- * @Description: 主要是用于解决 ceres 当中参数调用的时候判断成引用的问题
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-09-18 10:21:50
+ * @Description:目前看来内容比较混乱 
+ *              主要是用于解决 ceres 当中参数调用的时候判断成引用的问题
  *              最后发现原因是 operator () 没有添加 const 关键字限制
  */
 

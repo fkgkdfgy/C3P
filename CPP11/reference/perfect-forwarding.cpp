@@ -1,9 +1,10 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-09-11 11:09:59
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-09-11 12:38:05
- * @Description: 这里主要讨论C++11 的完美转发
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-09-18 09:00:06
+ * @Description: 这里主要讨论1. C++11 的完美转发
+ *                         2. 在对象被实例化时候，会使用什么样的Big Five 
  */
 
 #include <iostream>
@@ -17,7 +18,8 @@ class A
     A(const A & ){cout<<"copy ctor"<<endl;}
     A(const A &&){cout<<"move ctor"<<endl;}
     A& operator=(const A & ){cout<<"lvalue assign"<<endl;}
-    //A& operator=(const A &&){cout<<"rvalue assign"<<endl;} const T& 的操作符可以处理右值
+    A& operator=(const A &&){cout<<"rvalue assign"<<endl;} //const T& 的操作符可以处理右值
+    //
     ~A(){cout<<"dtor"<<endl;}
 };
 
@@ -43,11 +45,13 @@ void printCommon(T&& a)
 
 int main()
 {
-    A a;
-    A b;
-    a = std::move(b);
-    warp(a);
-    warp(A());
+    A a; // default ctor
+    A b; // default ctor
+    a = std::move(b); //  rvalue assign
+                      //  if the rvalue assign is commented , move(b) will be binded to a const lvalue reference
+                      //  then call the lvalue assign 
+    warp(a); // lvalue reference warp
+    warp(A()); // rvalue referecne warp
     
     return 0;
 }

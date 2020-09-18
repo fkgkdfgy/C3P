@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/vt_eg1.dir/CPP11/VariadicTemplate/vt_eg1.cpp.o  -o executable/vt_eg1 
