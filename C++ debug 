@@ -1,0 +1,9 @@
+1. warning: when initialized here  -werror = reorder 这个是在类ctor中 成员对象 ctor 的顺序会按照
+                                                     在类中声明的顺序进行初始化，而不是ctor 设置的顺序进行初始化
+                                                    ，所以这里会出现警告。
+   为了防止出现，成员对象的初始化有相互依赖的顺序关系
+2. multiple defintion of XXX  出现的情况 a. include 一个.cpp 文件
+                                       b.  hpp 和cpp 文件没有很好的分离，导致出现多次复制definition的情况
+3. undefined reference of function template  出现的情况 1. 模板声明和实现分离 
+                                                         但是 成员函数模板可以分类声明和定义
+                                       

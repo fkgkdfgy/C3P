@@ -12,6 +12,11 @@ include_directories(
 
 
 ## C++ Basic
+
+# include-error
+include_directories(BasicContent/include-error)
+add_executable(include-main BasicContent/include-error/include-main.cpp)
+
 # explicit
 add_executable(explicit-test BasicContent/explicit/explicit-test.cpp)
 

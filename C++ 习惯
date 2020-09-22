@@ -66,4 +66,5 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
 26. 对于基类的基础设置：1. dtor + virtual
                      2. copy ctor =delete   
                      3. copy assign = delete
-27.
+27. 做好函数的declare 和definition 的分离
+28. 函数模板(不是成员函数模板) declare 和 definitoin 不分离
