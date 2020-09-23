@@ -68,3 +68,21 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
                      3. copy assign = delete
 27. 做好函数的declare 和definition 的分离
 28. 函数模板(不是成员函数模板) declare 和 definitoin 不分离
+29. 函数参数的默认值，写在声明当中(声明和定义分离时，且定义中不能有默认值)
+30. 成员对象的声明次序，应该和ctor 中的初始化次序相同  防止出现初始化依赖次序被打乱的情况
+    i.e.  class
+          {
+              ctor():b(2),a(1){}
+              int a;
+              int b;
+          }
+31. ECPP27 尽量少做cast (转型) 操作
+    旧形: T(expression) (T)expression 现在只和 explicit 联合使用
+    新形: const_cast<T>() 用于去const 标签
+          dynamic_cast<T>() 用于安全的向下转型 可能耗费大量运算时间的计算
+          static_cast<T>() 强制转型 int-> double int -> const int 
+                           但是不能用于去const
+          reinterpret_cast<T>() 暂时不使用
+32. ECPP32 public 继承意味着 is-a 而且应该是所有能对Base 做的事 都可以对于Derived 进行
+
+
