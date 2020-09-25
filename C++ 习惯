@@ -6,6 +6,7 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
    iter 更要提前检测是否越界。
 
    防止出现 Core Dump 重要的一步。
+   
 2. 函数形参的传递：内置类型ie. float int 的传递 使用 pass-by-value 。 自定义类型使用 pass-by-reference-to-const
 
 3. ECPP1: const 代替 #define 
@@ -19,6 +20,9 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
 4. 多用const：4.1 返回值能const 就用const 甚至可以多用 const T &
               4.2 const成员函数
 5. 对象使用前确认会被初始化，int x； x 有时是0 有时不是0
+   
+   这一点在类的编码中十分重要 
+
 6. 了解C++ 悄悄构造的成员函数 Big Four: default 构造、析构、拷贝、赋值 
          6.1 Big Four 只有被调用的时候，才会自动生成。
          6.2 关于赋值和拷贝函数 如果类内部的类成员是一个 引用 或者 const 的话，拷贝和赋值函数都会报错，以为 引用和 const 不可更改的性质，且如果是对引用进行初始化，传入的不能是数值
@@ -84,5 +88,6 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
                            但是不能用于去const
           reinterpret_cast<T>() 暂时不使用
 32. ECPP32 public 继承意味着 is-a 而且应该是所有能对Base 做的事 都可以对于Derived 进行
-
+33. Debug 模式应该进行CHECK 所有的函数参数、类的参数
+34. 对只进行有限次数的函数，加bool 判断进行强约束。不能放心地相信这个不会跑多次
 
