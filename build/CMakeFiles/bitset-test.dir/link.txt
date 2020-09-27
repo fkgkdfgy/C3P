@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/bitset-test.dir/Carto-self-test/bitset/bitset.cpp.o  -o executable/bitset-test 

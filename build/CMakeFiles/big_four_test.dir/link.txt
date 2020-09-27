@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/big_four_test.dir/BasicContent/big-four-default/big-four-test.cpp.o  -o executable/big_four_test 

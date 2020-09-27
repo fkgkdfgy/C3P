@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/right-reference-learning.dir/BasicContent/reference/right-value-ref-function-default.cpp.o  -o executable/right-reference-learning 
