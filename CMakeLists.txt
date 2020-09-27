@@ -134,3 +134,4 @@ add_executable(bitset-test ./Carto-self-test/bitset/bitset.cpp)
 
 # ECPP17 
 add_executable(ECPP17 "Effective C++/ECPP17.cpp")
+add_executable(ECPP33 "Effective C++/ECPP33. name-scope-in-inherit.cpp")

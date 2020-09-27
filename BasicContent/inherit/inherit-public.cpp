@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-18 10:08:29
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-23 18:18:50
+ * @LastEditTime: 2020-09-27 19:10:38
  * @FilePath: /C3P/BasicContent/inherit/inherit-public.cpp
  * @Description: 用于探究 public 的继承的一些结论:
  *               1. 用于测试 class 内的public、private 会不会对写成 虚函数造成影响 
@@ -38,7 +38,7 @@ class Derived:public Base
     void callGetContent()const{getContent();}
 
     void printBaseContent(){cout<< getbaseContent()<<endl;} // 可以使用Base public 的成员函数，对Base private的对象进行访问
-    void printBaseContent_1(){cout<<baseContent_<<endl;} // 直接访问 Base private 的内容会报错
+    //void printBaseContent_1(){cout<<baseContent_<<endl;} // 直接访问 Base private 的内容会报错
 
     private:
     using Base::func;

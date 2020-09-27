@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sunny/workspace_private/C3P/BasicContent/include-error/header.hpp
+iostream
+-
+
+/home/sunny/workspace_private/C3P/BasicContent/include-error/include-A.hpp
+header.hpp
+/home/sunny/workspace_private/C3P/BasicContent/include-error/header.hpp
+
+/home/sunny/workspace_private/C3P/BasicContent/include-error/include-B.hpp
+header.hpp
+/home/sunny/workspace_private/C3P/BasicContent/include-error/header.hpp
+
+/home/sunny/workspace_private/C3P/BasicContent/include-error/include-main.cpp
+include-A.hpp
+/home/sunny/workspace_private/C3P/BasicContent/include-error/include-A.hpp
+include-B.hpp
+/home/sunny/workspace_private/C3P/BasicContent/include-error/include-B.hpp
+
