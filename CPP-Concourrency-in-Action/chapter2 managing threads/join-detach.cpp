@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-25 16:14:39
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-25 16:37:02
+ * @LastEditTime: 2020-09-28 16:52:20
  * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/join-detach.cpp
  * @Description: thread join 和detach 操作
  */
@@ -37,13 +37,14 @@ void no_decision()
 void join_later()
 {
     thread t(print);
+    cout<<"=============="<<endl;
     print();
-    t.join(); // 线程还是会把之后的那个print() 一起跑完
+    t.join(); // 线程并没有把之后的print() 一起跑完，最后只是运行了print 两遍
 }
 int main(int argc,char **argv)
 {
-    cout<<"join"<<endl;
-    join();
+    // cout<<"join"<<endl;
+    // join();
 
     //cout<<"detach"<<endl;
     //detach();
