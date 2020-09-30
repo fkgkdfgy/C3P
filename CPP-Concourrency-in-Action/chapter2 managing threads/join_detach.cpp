@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-25 16:14:39
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-28 16:52:20
+ * @LastEditTime: 2020-09-30 10:55:29
  * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/join-detach.cpp
  * @Description: thread join 和detach 操作
  */
@@ -27,6 +27,7 @@ void detach()
     print();
 }
 
+// 此处会直接调用print 
 void no_decision()
 {
     thread t(print);
