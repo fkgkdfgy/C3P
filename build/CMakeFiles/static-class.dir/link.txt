@@ -1,1 +1,0 @@
-/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/static-class.dir/BasicContent/static/static-class.cpp.o  -o executable/static-class 

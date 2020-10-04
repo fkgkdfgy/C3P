@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11 -o3   CMakeFiles/arguments_pass_for_thread.dir/chapter2_managing_threads/arguments_pass_for_thread.cpp.o  -o devel/arguments_pass_for_thread -lpthread 

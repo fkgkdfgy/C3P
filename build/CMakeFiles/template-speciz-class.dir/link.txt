@@ -1,1 +1,0 @@
-/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/template-speciz-class.dir/BasicContent/template/template-specialize-class.cpp.o  -o executable/template-speciz-class 

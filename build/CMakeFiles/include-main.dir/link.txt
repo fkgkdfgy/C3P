@@ -1,1 +1,0 @@
-/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/include-main.dir/BasicContent/include-error/include-main.cpp.o  -o executable/include-main 
