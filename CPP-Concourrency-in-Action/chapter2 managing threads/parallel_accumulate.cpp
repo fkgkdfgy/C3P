@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-09-30 14:03:09
- * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-30 16:59:32
+ * @LastEditors: Liu Weilong
+ * @LastEditTime: 2020-10-02 09:55:12
  * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/parallel_accumulate.cpp
  * @Description: 一个并行计算模块编写
  */
@@ -63,6 +63,16 @@ class ParallelAccumulate
            thread_array[i].join();
         }
         
+        // 因为这里的 不加 & 是使用左值构造 但那是thread 左值构造已经  =delete所以会调用失败
+        // 所以 单个auto 还是会进行构造
+        // 但是 auto & 就不会进行构造
+        // 这直接和 auto 的推导有关系
+        for(auto &element:thread_array)
+        {
+            if(element.joinable())
+            element.join();
+        }
+
         return std::accumulate(results_.begin(),results_.end(),init);
     }
 };

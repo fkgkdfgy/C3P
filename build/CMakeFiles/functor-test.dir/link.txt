@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/functor-test.dir/BasicContent/functor/functor.cpp.o  -o executable/functor-test 

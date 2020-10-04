@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/template/template-specialize-class.cpp
+iostream
+-
+vector
+-
+string
+-
+

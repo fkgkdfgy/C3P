@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-10 15:22:24
  * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-09-11 10:20:53
+ * @LastEditTime: 2020-10-02 09:13:58
  * @Description: 文件用于测试，函数参数是一个引用的使用，在创建临时对象对其赋值的时候，会不会出问题
  *               2020-09-11 09::06::57 第二次添加： 这个.cpp 文件是一个右值学习文件
  *               left value == locator value， right value == read value

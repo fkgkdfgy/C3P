@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -o3   CMakeFiles/parallel_accumulate.dir/chapter2_managing_threads/parallel_accumulate.cpp.o  -o devel/parallel_accumulate -lpthread 

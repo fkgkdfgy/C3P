@@ -1,0 +1,25 @@
+计划的主要目的是为了做到bug free 让代码的编写速度有所提升
+
+2020/10/4 carto_self 暴露出现的问题
+
+1. 模板的声明和定义在不同的文件内 如何处理各种模板存在的linking problem
+   包括：函数模板、成员函数模板、类模板 
+   重点就是：声明和定义一定不要分成两个文件进行存放 一旦分开存放就需要 explicit instaniate
+
+2. static member 存在多次定义和未定义的引用的问题
+    2.1 存在多次定义：
+                   原因：每一次.hpp 会跟着每一个include 的 .cpp 文件进行一次编译。
+                        所以如果.hpp 内部有定义的成分在，会出现多次定义的问题
+                   解决的方法：在foo.hpp中 真的非常好用 实验证明，.hpp .cpp 的分离式声明和定义 还是.hpp 的单独定义 都可以使用 
+                             也克服了之前 template 必须写在.hpp 内的问题 太棒了！
+    2.2 未定义的引用也因为 2.1 的合理得到了解决
+    
+    从此，class 编程习惯结合12，就得出了结果。
+    member function 分开定义
+    member function template 定义写在.hpp 中，防止explicit instaniate 的额外代码
+    static member variable 如果需要在.hpp 中和template适配  就需要写成 return T& 的member function 的形式 i.e. 看foo.hpp 的写法
+                                  在.cpp 文件中则随意，只要记得进行实例化即可 
+    function template 也尽量不要分离定义
+
+3.  typename 除了 template <typename T> 以外的使用，相对于1 2 是一个小点
+    有时候需要通过typename 来告诉编译器,这是一个类型名 而不是 一个对象

@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/template-default.dir/BasicContent/template/template-default.cpp.o  -o executable/template-default 

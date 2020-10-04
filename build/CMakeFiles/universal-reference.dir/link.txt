@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/universal-reference.dir/CPP11/reference/universal-reference.cpp.o  -o executable/universal-reference 

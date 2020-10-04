@@ -30,6 +30,7 @@ add_executable(pointer-test BasicContent/pointer/pointer-test.cpp)
 add_executable(inline-type-uchar ./BasicContent/inline-type/inline-type-uchar.cpp)
 
 # Big Four Test
+add_executable(big-four-in-arguments-transfer ./BasicContent/big-four-default/big-four-in-arguments-transfer.cpp)
 add_executable(big_four_test ./BasicContent/big-four-default/big-four-test.cpp)
 
 # 关于 make_shared<Derived>(Derived()) 析构两次的问题 存疑？

@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -o3   CMakeFiles/thread_guard.dir/chapter2_managing_threads/thread_guard.cpp.o  -o devel/thread_guard -lpthread 

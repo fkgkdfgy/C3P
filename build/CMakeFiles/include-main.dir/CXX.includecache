@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/header.hpp
+iostream
+-
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/include-A.hpp
+header.hpp
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/header.hpp
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/include-B.hpp
+header.hpp
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/header.hpp
+
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/include-main.cpp
+include-A.hpp
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/include-A.hpp
+include-B.hpp
+/home/lwl/workspace/CPlusPlusPratice/BasicContent/include-error/include-B.hpp
+

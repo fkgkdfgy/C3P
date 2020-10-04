@@ -14,6 +14,6 @@
    |__ std::ref lvalue ref
 5. parallel accumulate 综合样例 完成
    |__ 综合暴露的问题
-       |__ for_each 对于thread_array 并不适用 thread只有右值赋值 和 右值构造
-       |__ 对于函数传参的理解
-       |__ thread 传值
+       |__ for_each 的auto 对于thread_array 并不适用 thread只有右值赋值 和 右值构造 和默认构造 完成
+       |__ 对于函数传参的理解 完成 的确有很多地方需要注意
+       |__ thread 传值      完成 之前的理解是没有问题的

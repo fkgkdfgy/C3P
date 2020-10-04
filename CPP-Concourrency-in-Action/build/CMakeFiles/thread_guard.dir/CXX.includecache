@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/common.hpp
+iostream
+-
+
+/home/lwl/workspace/CPlusPlusPratice/CPP-Concourrency-in-Action/chapter2 managing threads/thread_guard.cpp
+thread
+-
+iostream
+-
+utility
+-
+common.hpp
+/home/lwl/workspace/CPlusPlusPratice/CPP-Concourrency-in-Action/chapter2 managing threads/common.hpp
+

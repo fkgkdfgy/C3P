@@ -71,7 +71,7 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
                      2. copy ctor =delete   
                      3. copy assign = delete
 27. 做好函数的declare 和definition 的分离
-28. 函数模板(不是成员函数模板) declare 和 definitoin 不分离
+28. 函数模板(包括成员函数模板) declare 和 definitoin 不分离
 29. 函数参数的默认值，写在声明当中(声明和定义分离时，且定义中不能有默认值)
 30. 成员对象的声明次序，应该和ctor 中的初始化次序相同  防止出现初始化依赖次序被打乱的情况
     i.e.  class
