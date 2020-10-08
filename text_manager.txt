@@ -2,6 +2,9 @@
 
 BasicContent 
    |__ big_four_default 用于测试Big Four 的 default 和 delete 样例 (Effective C++)
+   |__ explicit 显式转换要求
+   |__ functor 仿函数的编写
+   |__ include-error 多次定义的问题
    |__ lotsofvalue 用于测试参数包。 想法无法实现
    |__ macro 用于测试 #define 用于编译控制 结合cmake进行实现，cmake此处的使用细节见 CMakeLists
    |__ template 用于测试 模板的特化 和 偏特化。 类的偏特化不知道为什么编译无法通过

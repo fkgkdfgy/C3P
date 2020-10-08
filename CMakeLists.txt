@@ -85,6 +85,7 @@ add_executable(right-reference-learning BasicContent/reference/right-value-ref-f
 # iherit
 add_executable(inherit-relation BasicContent/inherit/inherit-relation.cpp)
 add_executable(inherit-public BasicContent/inherit/inherit-public.cpp)
+add_executable(inherit-polymorphism-call-virtual-function BasicContent/inherit/inherit-polymorphism-call-virtual-function.cpp)
 
 # 测试static 关键字
 include_directories(BasicContent/static)

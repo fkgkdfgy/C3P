@@ -18,6 +18,7 @@
     member function 分开定义
     member function template 定义写在.hpp 中，防止explicit instaniate 的额外代码
     static member variable 如果需要在.hpp 中和template适配  就需要写成 return T& 的member function 的形式 i.e. 看foo.hpp 的写法
+                                                         可以有效遏制多次定义的问题
                                   在.cpp 文件中则随意，只要记得进行实例化即可 
     function template 也尽量不要分离定义
 

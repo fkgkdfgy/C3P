@@ -32,6 +32,17 @@ class A
     int &ra;
 };
 
+class C
+{
+    public:
+    
+    C(int a):ra(a){ ra = 1000;}
+    
+    private:
+
+    int ra;
+};
+
 
 
 int main()
@@ -47,7 +58,10 @@ int main()
     cout<<tmp<<endl;
     // a = a_t; 
     // a(a_t);  以上两行均会报错
+    //          因为 A 当中有引用的成员变量，如果不人为的进行 声明和定义 拷贝赋值 和 拷贝构造 会被 =delete
+    //          C 中没有引用 就可以进行拷贝赋值 和 拷贝构造
 
-
-
+    C c(10);
+    C c_t(tmp);
+    c = c_t;
 }
