@@ -8,7 +8,7 @@
             "name": "(gdb) 启动",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/lwl/workspace/CPlusPlusPratice/build/build/executable/sophus-test",
+            "program": "/home/sunny/workspace_private/C3P/CPP-Concourrency-in-Action/build/devel/condition_variable_and_mutex",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
