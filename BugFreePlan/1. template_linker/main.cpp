@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-10-02 22:15:20
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-10-04 11:49:42
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-10-14 16:32:57
  * @Description: 
  */
 #include "foo.hpp"
@@ -21,5 +21,9 @@ int main()
     // 写在一个文件内，不论是直接定义还是  定义+声明 的形式 都是可以正常使用的
     CDefInHpp d;
     d.print(float(5));
+    
+    // 一个合并式的 ”奇怪“的例子
+    CDefInAnotherHpp e;
+    e.print(float(5));
 
 }

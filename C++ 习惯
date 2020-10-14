@@ -93,3 +93,7 @@ C++ 习惯 (重构的重要组建之一) Effective C++ 和 个人C++ 总结
 35. ECPP33 请注意所有Base 和 Derived 的重名的情况，并且要针对重名情况小心的使用using。
            不然会出现各种各样的胡乱调用的情况。
            也就是说，在使用各种Base和 Derived 重新mf 或者mo 的时候，请明确他在哪个命名空间内
+36. ECPP35 NVI 原则 也就是说
+           使用public member function 包裹一个private virtual member function
+           一个 template method 一个 wrapper 的手法
+           Strategy 模式
