@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-09-30 13:47:12
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-10-02 09:22:20
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-10-10 09:13:08
  * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/arguments_pass_for_thread.cpp
  * @Description:  总结：1. by default 参数传递给线程的时候，是先进行参数复制，然后右值传递给可调用的函数指针
  *                     2. 想要传递ref 需要在参数处使用std::ref
@@ -12,6 +12,7 @@
 
 #include <thread>
 #include <iostream>
+#include <functional>
 #include "common.hpp"
 
 using namespace std;

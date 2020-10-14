@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-10-02 22:12:36
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-10-02 22:49:47
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-10-14 16:51:48
  * @Description: 函数实现
  */
 #include "foo.hpp"
@@ -20,6 +20,8 @@ void print(const T & msg)
 // 真的是神奇  如果 没有 成员函数的部分 下面这一句根本通过不了
 // 那么以后就规定都要写到.int.cpp 文件内好了
 // template void print<int>(const int &);
+// 但是是有副作用的 之后 print<int> 可以被调用
+// print <float> 无法被调用
 
 // member function template
 template <typename T>

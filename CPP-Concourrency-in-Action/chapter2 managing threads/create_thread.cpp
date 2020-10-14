@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-24 17:59:20
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-30 16:10:36
+ * @LastEditTime: 2020-10-10 09:41:32
  * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/create_thread.cpp
  * @Description: 创建线程的方法
  */
@@ -48,6 +48,10 @@ int main(int argc,char **argv)
     thread t3(std::bind(&mf_class::do_something_1,&tmp));
     t3.join();
     
+    //    mf 创建，这里就是正经的member function 调用了
+    thread t6(&mf_class::do_something_1,&tmp);
+    t6.join();
+
     // 3. functor 方法创建
     C_do_something c;
     thread t2(c);

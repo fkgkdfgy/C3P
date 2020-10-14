@@ -1,11 +1,30 @@
 project(CPPCA)
 cmake_minimum_required(VERSION 3.5)
-set(CMAKE_CXX_FLAGS "-std=c++11 -o3")
+set(CMAKE_CXX_FLAGS "-std=c++14 -o3")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY devel)
+set(CMAKE_BUILD_TYPE DEBUG)
 
 find_package(Threads)
 
 include_directories(include)
+
+### baseline
+## 1. 多线程的创建和mutex 锁
+add_executable(thread_create_and_mutex "baseline/thread_create_and_mutex.cpp")
+target_link_libraries(thread_create_and_mutex ${CMAKE_THREAD_LIBS_INIT})
+
+## 2. Condition_Variable 和mutex 综合使用
+add_executable(condition_variable_and_mutex "baseline/condition_variable_and_mutex.cpp")
+target_link_libraries(condition_variable_and_mutex ${CMAKE_THREAD_LIBS_INIT})
+
+## 3. future 和 Async 的使用
+add_executable(future_and_async "baseline/future_and_async.cpp")
+target_link_libraries(future_and_async ${CMAKE_THREAD_LIBS_INIT})
+
+## 4. 线程池简单实现
+add_executable(thread_pool_simple "baseline/thread_pool_simple.cpp")
+target_link_libraries(thread_pool_simple ${CMAKE_THREAD_LIBS_INIT})
+
 
 ### Chapter1 hello world
 add_executable(hello_world_node "chapter1 hellowrold/hello_world_node.cpp")

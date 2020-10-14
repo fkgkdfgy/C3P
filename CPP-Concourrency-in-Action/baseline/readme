@@ -1,0 +1,21 @@
+这个文档只是包括最基本的内容
+1. 多线程的创建和mutex 锁                           thread_create_and_mutex
+2. Condition_Variable 和mutex 综合使用             condition_variable_and_mutex
+   生产消费模型，这里使用SLAM的前后端初始化值的传递模型
+   condition_variable mutex 的差别：
+   2.1 如果是单次提取没有区别
+   2.2 多次提取的时候mutex的条件查询会让CPU达到100  
+   
+3. async 和future 的使用                           future_and_async
+4. atomic 操作 保证不会出现部分修改的情况
+   可以用于竞争条件的问题
+5. 线程池 基础版本 任务的类型 限制为 function<void()>  thread_pool_simple
+6. 线程池 进阶-1 
+   任务类型限制变为 function<typename T()>
+   使用async 进行
+
+   未完成：
+   学到了一手多种类型进行保存 
+   vector 如何push_back 和 emplace_back 的
+   数值传递如何进行
+   unqiue 的使用
