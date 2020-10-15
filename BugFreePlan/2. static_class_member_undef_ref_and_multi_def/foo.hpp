@@ -2,11 +2,13 @@
  * @Author: Liu Weilong
  * @Date: 2020-10-04 11:17:52
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-10-14 14:35:36
+ * @LastEditTime: 2020-10-15 16:45:53
  * @Description: 主要是检测 static class member undef ref 和multiple definition 的问题
  *               对应Carto-self 当中，static member variable 有的在template(.hpp) 里面使用
  *                                                          有的在 .cpp 中使用情况
- *  
+ *               报错形式： multiple defintion "a"              
+ * 
+ * 
  */
 #ifndef FOO
 #define FOO

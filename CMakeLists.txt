@@ -47,14 +47,15 @@ add_executable(template-speciz-class ./BasicContent/template/template-specialize
 add_executable(templatespecFunc ./BasicContent/template/template-specialize-function.cpp)
 add_executable(template-default BasicContent/template/template-default.cpp)
 # macro  
-
+    # https://cmake.org/cmake/help/v3.2/command/configure_file.html?highlight=cmakedefine
+    # 以上是cmakedefine 的使用内容
     # SET 可以用于def or undef 
     SET(US_B 1)
 
     # message(STATUS ${US_B})
 
     SET(MACRO_PRAC_DIR BasicContent/macro)
-
+    
     # 使用了cmakedefine01 后缀有个0 存疑 TODO
     SET(TEST_VAR1 AAAAAAA)
 

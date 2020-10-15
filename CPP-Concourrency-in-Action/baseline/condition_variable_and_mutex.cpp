@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-10-10 09:21:14
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-10-10 13:19:39
+ * @LastEditTime: 2020-10-15 14:06:03
  * @FilePath: /C3P/CPP-Concourrency-in-Action/baseline/condition_variable_and_mutex.cpp
  * @Description: Condition_Variable 和mutex 综合使用             condition_variable_and_mutex
  *               生产消费模型，这里使用SLAM的前后端初始化值的传递模型
@@ -10,6 +10,16 @@
  *                       2. 理解 mutex和condition_variable 实现的差别
  *               cond_var 的优势    1. CPU 小 如果是mutex 的版本占用率100
  *               目前问题：1. 存在多次调用的问题
+ *                          目前的猜测是 
+ *                          通过第一次调用结束之后，因为没有等待，所以就直接进入下一次循环
+ *                          unique_lock 再次锁定，因为持有锁 condition_var 的wait 会直接进行条件判断
+ *               condition_var 比mutex 是在进行循环上查看的时候CPU 的占用率
+ *               例子就是：
+ *               一个蛋糕流水线，mutex 的循环查看，相当于人要一直看着轨道，如果有蛋糕来了，
+ *                            人把机器停下来(lock)，把蛋糕拿下来，人非常累(CPU高)
+ *                            condition_var的循环查看，相当于在轨道上按了一个蛋糕检查装置，如果有蛋糕来了，
+ *                            就给人发警示信号,人把机器人停下来，把蛋糕拿下来，人轻松了很多(CPU低)
+ *               
  */
 
 #include <iostream>
