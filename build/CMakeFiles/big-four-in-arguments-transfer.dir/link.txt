@@ -1,1 +1,0 @@
-/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/big-four-in-arguments-transfer.dir/BasicContent/big-four-default/big-four-in-arguments-transfer.cpp.o  -o executable/big-four-in-arguments-transfer 
