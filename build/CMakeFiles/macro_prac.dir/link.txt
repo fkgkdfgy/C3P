@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/macro_prac.dir/BasicContent/macro/macro_prac.cpp.o CMakeFiles/macro_prac.dir/BasicContent/macro/macro.cpp.o  -o executable/macro_prac 

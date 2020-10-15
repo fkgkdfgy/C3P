@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/inherit-public.dir/BasicContent/inherit/inherit-public.cpp.o  -o executable/inherit-public 

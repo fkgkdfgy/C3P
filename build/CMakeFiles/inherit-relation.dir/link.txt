@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/inherit-relation.dir/BasicContent/inherit/inherit-relation.cpp.o  -o executable/inherit-relation 

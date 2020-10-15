@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/inherit-polymorphism-call-virtual-function.dir/BasicContent/inherit/inherit-polymorphism-call-virtual-function.cpp.o  -o executable/inherit-polymorphism-call-virtual-function 

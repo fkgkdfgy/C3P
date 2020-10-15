@@ -1,0 +1,1 @@
+/usr/bin/g++-5   -std=c++11 -ox -g   CMakeFiles/ECPP17.dir/Effective_C++/ECPP17.cpp.o  -o executable/ECPP17 
