@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++14 -o3 -g   CMakeFiles/condition_variable_and_mutex.dir/baseline/condition_variable_and_mutex.cpp.o  -o devel/condition_variable_and_mutex -lpthread 

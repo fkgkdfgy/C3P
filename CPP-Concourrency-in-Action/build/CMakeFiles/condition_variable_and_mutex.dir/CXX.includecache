@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sunny/workspace_private/C3P/CPP-Concourrency-in-Action/baseline/condition_variable_and_mutex.cpp
+iostream
+-
+atomic
+-
+mutex
+-
+condition_variable
+-
+thread
+-
+chrono
+-
+memory
+-
+queue
+-
+random
+-
+

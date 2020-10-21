@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/ECPP33.dir/Effective_C++/ECPP33._name-scope-in-inherit.cpp.o  -o executable/ECPP33 

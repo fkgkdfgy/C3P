@@ -25,6 +25,10 @@ target_link_libraries(future_and_async ${CMAKE_THREAD_LIBS_INIT})
 add_executable(thread_pool_simple "baseline/thread_pool_simple.cpp")
 target_link_libraries(thread_pool_simple ${CMAKE_THREAD_LIBS_INIT})
 
+## 5. atomic if CPU 占用查看
+add_executable(simple_test_atomic_if "baseline/simple_test_atomic_if.cpp")
+target_link_libraries(simple_test_atomic_if ${CMAKE_THREAD_LIBS_INIT})
+
 
 ### Chapter1 hello world
 add_executable(hello_world_node "chapter1 hellowrold/hello_world_node.cpp")

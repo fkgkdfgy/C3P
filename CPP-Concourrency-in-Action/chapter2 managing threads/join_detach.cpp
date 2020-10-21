@@ -2,9 +2,16 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-25 16:14:39
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-09-30 10:55:29
- * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/join-detach.cpp
+ * @LastEditTime: 2020-10-20 13:56:01
+ * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/join_detach.cpp
  * @Description: thread join 和detach 操作
+ *               经过这段时间的多线程的使用
+ *               还是对多线程有了一些了解
+ *               t.join() 就是会在这里对这行代码一直等待 t 运行结束
+ *               t.detach() 就是说明不用继续等待
+ * 
+ * 
+ * 
  */
 #include <thread>
 #include <iostream>

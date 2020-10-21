@@ -5,6 +5,11 @@
  * @LastEditTime: 2020-10-14 15:04:27
  * @Description: 用于测试模板声明和定义分离的问题
  *               注意  这里的模板 包括 函数模板 和 类模板
+ * 
+ *               报错形式： undefined reference to `void print<int>(int const&)'
+ *                        原因: 模板 分离式定义 + 没有进行 explicit instantiate
+ *                        
+ *                        multiple definition 
  *  
  *               结论： 1.  分离的定义需要添加特殊的 explicit instantiate 语句
  *                     2.  如果不想添加，请把声明和定义写在一起把

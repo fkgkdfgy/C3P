@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++14 -o3 -g   CMakeFiles/simple_test_atomic_if.dir/baseline/simple_test_atomic_if.cpp.o  -o devel/simple_test_atomic_if -lpthread 

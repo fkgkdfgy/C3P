@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sunny/workspace_private/C3P/CPP-Concourrency-in-Action/chapter2 managing threads/parallel_accumulate.cpp
+thread
+-
+iostream
+-
+vector
+-
+numeric
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++14 -o3 -g   CMakeFiles/join_detach.dir/chapter2_managing_threads/join_detach.cpp.o  -o devel/join_detach -lpthread 

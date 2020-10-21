@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/common.hpp
+iostream
+-
+
+/home/sunny/workspace_private/C3P/CPP-Concourrency-in-Action/chapter2 managing threads/arguments_pass_for_thread.cpp
+thread
+-
+iostream
+-
+functional
+-
+common.hpp
+/home/sunny/workspace_private/C3P/CPP-Concourrency-in-Action/chapter2 managing threads/common.hpp
+
