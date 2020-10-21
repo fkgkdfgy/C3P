@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++14 -o3 -g   CMakeFiles/hello_world_node.dir/chapter1_hellowrold/hello_world_node.cpp.o  -o devel/hello_world_node -lpthread 

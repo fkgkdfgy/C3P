@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -ox -g   CMakeFiles/virtual_dtor_base.dir/BasicContent/big-four-default/virtual-dtor-base.cpp.o  -o executable/virtual_dtor_base 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++14 -o3 -g   CMakeFiles/future_and_async.dir/baseline/future_and_async.cpp.o  -o devel/future_and_async -lpthread 

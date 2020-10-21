@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++14 -o3 -g   CMakeFiles/create_thread.dir/chapter2_managing_threads/create_thread.cpp.o  -o devel/create_thread -lpthread 
