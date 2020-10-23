@@ -1,0 +1,3 @@
+1. 设计模式
+   模仿 ros2 publisherBase publisher <T> 编写demo 代码
+2. 头文件链接bug 找不到某些内容
