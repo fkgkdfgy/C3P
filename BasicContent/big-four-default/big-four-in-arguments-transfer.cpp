@@ -1,8 +1,8 @@
 /*
  * @Author: Liu Weilong
  * @Date: 2020-10-02 09:12:22
- * @LastEditors: Liu Weilong
- * @LastEditTime: 2020-10-02 09:43:52
+ * @LastEditors: Liu Weilong 
+ * @LastEditTime: 2020-10-27 17:16:15
  * @Description: 主要是用于探究Big Five 在传递参数的时候 经历了什么
  *               1. 函数传参的构造方式
  *               2. for_each 的构造方式
@@ -26,7 +26,9 @@ class printf1
         ShowIndex();
     }
 
-    printf1(const printf1 && tmp)
+    // 刚刚发现自己的移动构造写的有问题
+    // 移动构造的主要的目的是 减少 拷贝构造的时候 tmp 对象的构造 析构消耗
+    printf1( printf1 && tmp)
     {
         cout<<"rvalue copy ctor is called"<<endl;
         ShowIndex();
@@ -40,7 +42,8 @@ class printf1
 
     // 这个右值的移动赋值实际上是没有意义的，因为右值是可以直接被 const & 承接的
     // 所以最终还是Big Five
-    printf1 & operator=(const printf1 && tmp)
+    // 2020.10.27 是意义的  可以防止深度拷贝
+    printf1 & operator=( printf1 && tmp)
     {
         cout<<"rvalue assign is called"<<endl;
     }
