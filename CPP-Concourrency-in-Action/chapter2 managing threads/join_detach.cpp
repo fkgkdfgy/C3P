@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-09-25 16:14:39
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-10-20 13:56:01
+ * @LastEditTime: 2020-10-29 13:54:29
  * @FilePath: /C3P/CPP-Concourrency-in-Action/chapter2 managing threads/join_detach.cpp
  * @Description: thread join 和detach 操作
  *               经过这段时间的多线程的使用
@@ -38,7 +38,7 @@ void detach()
 void no_decision()
 {
     thread t(print);
-    print();
+    
 }
 
 
@@ -61,6 +61,8 @@ int main(int argc,char **argv)
     //no_decision(); // 会直接调用 terminate 尽量避免这种情况出现
 
     cout<<"join_later"<<endl;
-    join_later();
+    thread t(print);
+    for(int i=0;i<2000;i++)
+    cout<<i<<endl;
     return 0;
 }

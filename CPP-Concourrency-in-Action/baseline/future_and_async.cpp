@@ -2,7 +2,7 @@
  * @Author: Liu Weilong
  * @Date: 2020-10-10 13:22:46
  * @LastEditors: Liu Weilong 
- * @LastEditTime: 2020-10-10 13:42:15
+ * @LastEditTime: 2020-10-29 15:23:59
  * @FilePath: /C3P/CPP-Concourrency-in-Action/baseline/future_and_async.cpp
  * @Description: 为了学习 async 和 future 的使用
  *               thread 没有一个返回值的机制
@@ -30,7 +30,7 @@ int main(int argc,char **argv)
     future<double> f2 = async(do_something,1);
     future<double> f3 = async(do_something,1);
     
-    double result = do_something(1.)+ f1.get()+f2.get()+f3.get();
+    double result = do_something(1.)+ f1.get()+f2.get()+f3.get(); // 如果没有计算好，会一直在这里等待，直到有结果
     
     auto duration = chrono::steady_clock::now() - start;
     
